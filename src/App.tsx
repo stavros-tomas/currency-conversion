@@ -1,10 +1,11 @@
 import './App.css'
+import Button from '@mui/material/Button';
 
 function App() {
   return (
     <>
       <h1>Currency Conversion</h1>
-      <p>Hello World</p>
+      <Button variant="contained">Convert</Button>
     </>
   )
 }
