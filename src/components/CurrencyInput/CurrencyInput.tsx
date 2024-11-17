@@ -1,22 +1,30 @@
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
-import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
-
-
-interface Currency {
-  short_code: string;
-  name: string;
-}
+import type { Currency } from '../../types';
+import { ChangeEvent } from 'react';
 
 interface CurrencyInputProps {
   label: string;
   currencies: Currency[];
+  amount?: number | '';
+  onCurrencyChange: (currency: string) => void;
+  onAmountChange?: (amount: number) => void;
 }
 
-export default function CurrencyInput({ label, currencies }: CurrencyInputProps) {
+export default function CurrencyInput({ label, currencies, amount, onCurrencyChange, onAmountChange }: CurrencyInputProps) {
+  const handleCurrencyChange = (event: ChangeEvent<{ value: unknown }>) => {
+    onCurrencyChange(event.target.value as string);
+  };
+
+  const handleAmountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (onAmountChange) {
+      onAmountChange(Number(event.target.value));
+    }
+  };
+
   return (
     <FormControl className="tw-w-full">
       <div className="tw-flex tw-flex-row">
@@ -24,24 +32,34 @@ export default function CurrencyInput({ label, currencies }: CurrencyInputProps)
           <InputLabel id={label}>{label}</InputLabel>
           <Select
             className="tw-w-full"
+            defaultValue=''
             labelId={label}
             label={label}
+            onChange={handleCurrencyChange}
           >
-            {currencies.map((currency) => (
-            <MenuItem
-              key={currency.short_code}
-              value={currency.short_code}
-            >{currency.name}</MenuItem>
-            ))}
+            {currencies.length > 0 ? (
+              currencies.map((currency) => (
+                <MenuItem
+                  key={`${label}-${currency.short_code}`}
+                  value={currency.short_code}
+                >
+                  {currency.name}
+                </MenuItem>
+              ))
+            ) : (
+              <MenuItem disabled>No currencies available</MenuItem>
+            )}
           </Select>
         </div>
 
         <div className="tw-w-8/12 tw-ml-2">
           <TextField
+            value={amount}
             className="tw-w-full"
             type="number"
             id="filled-basic"
             label="Amount"
+            onChange={handleAmountChange}
           />
         </div>
       </div>
