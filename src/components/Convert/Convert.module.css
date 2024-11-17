@@ -1,0 +1,4 @@
+.convertWrapper {
+  @apply tw-flex tw-flex-col tw-items-center;
+  @apply tw-w-full;
+}
