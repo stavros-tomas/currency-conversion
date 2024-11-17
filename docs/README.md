@@ -4,12 +4,16 @@ This is a simple currency conversion application that allows users to convert be
 The application uses the [ExchangeRate-API](https://api.currencybeacon.com/) to get the latest exchange rates.
 
 # Technologies used
+This application could have been build using much simpler technologies. However as a technology demonstrator, I decided to use the following technologies:
+
 - `Vite` as the build tool
 - `Node`, make sure you have the correct Node version. This application uses Node version 20.18.0.
 You can use `nvm` to manage your Node versions. After you have the correct node version, you can run `nvm use 20.18.0` to use the correct version.
 - `React` for the frontend
 - `TypeScript` for static type checking
-- `Material-UI`, a popular React component library that in this case was useful to create the app without spending too much time on individual components creation.
+- `Material-UI`, a popular React component library to take advantage of the pre-built components
+- `TailwindCSS`, a utility-first CSS framework to style the application
+- `PostCSS`, a tool for transforming CSS with JavaScript plugins
 
 # Installation
 1. Clone the repository
