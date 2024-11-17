@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
-import CurrencyInput from './CurrencyInput';
+import { describe, it, expect } from 'vitest';
+import Convert from './Convert';
 import type { Currency } from '../../types';
 
 const mockCurrencies: Currency[] = [
@@ -9,16 +9,10 @@ const mockCurrencies: Currency[] = [
   { short_code: 'GBP', name: 'British Pound', code: 'GBP', decimal_mark: '.', id: 3, precision: 2, subunit: 100, symbol: '£', symbol_first: true, thousands_separator: ',' },
 ];
 
-describe('CurrencyInput Component', () => {
+describe('Convert Component', () => {
   it('should render correctly with given props', () => {
-    const {container} =render(
-      <CurrencyInput
-        label="Currency"
-        currencies={mockCurrencies}
-        amount=""
-        onCurrencyChange={vi.fn()}
-        onAmountChange={vi.fn()}
-      />
+    const { container } = render(
+      <Convert currencies={mockCurrencies} />
     );
 
     expect(container).toMatchSnapshot();
