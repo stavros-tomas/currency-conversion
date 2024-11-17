@@ -9,7 +9,7 @@ function App() {
   const API_KEY = import.meta.env.VITE_SECRET_CURRENCYBEACON_API_KEY;
   const CURRENCIES_BASE_API_URL = import.meta.env.VITE_CURRENCYBEACON_CURRENCIES_API_URL;
 
-  const [currencies, setCurrencies] = useState<CurrenciesResponse[]>([]);
+  const [currencies, setCurrencies] = useState<CurrenciesResponse>([]);
 
   const fetchCurrencies = async() => {
     if (!API_KEY || !CURRENCIES_BASE_API_URL) {

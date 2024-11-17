@@ -5,6 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import type { Currency } from '../../types';
 import { ChangeEvent } from 'react';
+import { SelectChangeEvent } from '@mui/material/Select';
 
 interface CurrencyInputProps {
   label: string;
@@ -15,7 +16,7 @@ interface CurrencyInputProps {
 }
 
 export default function CurrencyInput({ label, currencies, amount, onCurrencyChange, onAmountChange }: CurrencyInputProps) {
-  const handleCurrencyChange = (event: ChangeEvent<{ value: unknown }>) => {
+  const handleCurrencyChange = (event: SelectChangeEvent<string>) => {
     onCurrencyChange(event.target.value as string);
   };
 
