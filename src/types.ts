@@ -1,14 +1,14 @@
 export type Currency = {
-  code: string;
-  decimal_mark: string;
-  id: number;
+  code?: string;
+  decimal_mark?: string;
+  id?: number;
   name: string;
-  precision: number;
+  precision?: number;
   short_code: string;
-  subunit: number;
-  symbol: string;
-  symbol_first: boolean;
-  thousands_separator: string;
+  subunit?: number;
+  symbol?: string;
+  symbol_first?: boolean;
+  thousands_separator?: string;
 };
 
 export type CurrenciesResponse = Currency[];

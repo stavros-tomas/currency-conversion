@@ -37,6 +37,7 @@ export default function CurrencyInput({ label, currencies, amount, onCurrencyCha
             labelId={label}
             label={label}
             onChange={handleCurrencyChange}
+            data-testid="currency-input__currency"
           >
             {currencies.length > 0 ? (
               currencies.map((currency) => (
@@ -61,6 +62,7 @@ export default function CurrencyInput({ label, currencies, amount, onCurrencyCha
             id="filled-basic"
             label="Amount"
             onChange={handleAmountChange}
+            data-testid="currency-input__amount"
           />
         </div>
       </div>

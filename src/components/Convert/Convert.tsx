@@ -49,12 +49,19 @@ export default function Convert({ currencies }: ConvertProps) {
   };
 
   const handleConvert = async () => {
-    fetchConvert();
+    if (fromCurrency.amount && fromCurrency.currency && toCurrency.currency) {
+      fetchConvert();
+    } else {
+      console.error('Please provide both currencies and the amount to convert.');
+    }
   };
 
   return (
     <div className={styles.convertWrapper}>
-      <div className="tw-mt-4 tw-w-full">
+      <div
+        className="tw-mt-4 tw-w-full"
+        data-testid="from-currency-input"
+      >
         <CurrencyInput
           label={'From'}
           currencies={currencies}
@@ -63,7 +70,10 @@ export default function Convert({ currencies }: ConvertProps) {
         />
       </div>
 
-      <div className="tw-mt-6 tw-w-full">
+      <div
+        className="tw-mt-6 tw-w-full"
+        data-testid="to-currency-input"
+      >
         <CurrencyInput
           label={'To'}
           currencies={currencies}

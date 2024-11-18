@@ -7,6 +7,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
   >
     <div
       class="tw-mt-4 tw-w-full"
+      data-testid="from-currency-input"
     >
       <div
         class="MuiFormControl-root tw-w-full css-1iw3t7y-MuiFormControl-root"
@@ -26,6 +27,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl tw-w-full css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+              data-testid="currency-input__currency"
             >
               <div
                 aria-controls=":r0:"
@@ -79,6 +81,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
           >
             <div
               class="MuiFormControl-root MuiTextField-root tw-w-full css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+              data-testid="currency-input__amount"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
@@ -118,6 +121,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
     </div>
     <div
       class="tw-mt-6 tw-w-full"
+      data-testid="to-currency-input"
     >
       <div
         class="MuiFormControl-root tw-w-full css-1iw3t7y-MuiFormControl-root"
@@ -137,6 +141,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
             </label>
             <div
               class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl tw-w-full css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+              data-testid="currency-input__currency"
             >
               <div
                 aria-controls=":r2:"
@@ -190,6 +195,7 @@ exports[`Convert Component > should render correctly with given props 1`] = `
           >
             <div
               class="MuiFormControl-root MuiTextField-root tw-w-full css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+              data-testid="currency-input__amount"
             >
               <label
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"

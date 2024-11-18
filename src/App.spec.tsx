@@ -13,4 +13,7 @@ describe('App', () => {
     const { container } = render(<App />);
     expect(container).toMatchSnapshot();
   });
+
+  // TODO: Add tests that currencies fetch got called 1 upon initializationcalled
+  // TODO: Add tests for error handling
 });

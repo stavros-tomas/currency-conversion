@@ -1,4 +1,3 @@
-import './App.css'
 import Convert from './components/Convert/Convert'
 import { useEffect, useState } from 'react'
 import type { CurrenciesResponse } from './types'
