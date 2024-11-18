@@ -1,5 +1,5 @@
 import { render, fireEvent, waitFor, screen, within } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import Convert from './Convert';
 import type { Currency } from '../../types';
 
@@ -25,7 +25,7 @@ describe('Convert Component', () => {
           response: { value: 100 },
         }),
       })
-    ) as jest.Mock;
+    ) as unknown as jest.Mock;
 
     render(<Convert currencies={mockCurrencies} />);
 
